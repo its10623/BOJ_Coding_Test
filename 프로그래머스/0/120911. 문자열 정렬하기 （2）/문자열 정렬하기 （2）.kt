@@ -1,11 +1,7 @@
 class Solution {
     fun solution(my_string: String): String {
-        var answer = ""
-
-        for (char in my_string.toList()) {
-            answer += char.lowercase()
-        }
+        var answer = my_string.toList().map { it.lowercase() }.sorted().joinToString("")
         
-        return answer.toList().sorted().joinToString("")
+        return answer
     }
 }
